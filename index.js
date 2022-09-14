@@ -34,7 +34,9 @@ app.get('/sobre', async function(req, res){
 app.get('/autenticar', async function(req, res){
   res.render('autenticar');
 })
-
+app.get('/cadastrar', async function(req, res){
+  res.render('cadastrar');
+})
 app.get('/', async function(req, res){
   res.render("home")
 })

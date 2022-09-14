@@ -30,7 +30,9 @@ app.use(
 app.get('/sobre', async function(req, res){
   res.render('sobre');
 })
-
+app.get('/listar', async function(req, res){
+  res.render('listar');
+})
 app.get('/autenticar', async function(req, res){
   res.render('autenticar');
 })
@@ -59,8 +61,9 @@ app.post('/deslogar', function(req, res) {
   res.cookie('token', null, { httpOnly: true });
   res.json({deslogado: true})
 })
-app.post('/cadastrar', function(req, res) {
-  res.cookie('token', null, { httpOnly: true });
+app.post('/cadastrar', async function(req, res) {
+  const usuario= usuario.create(req.body.usuario)
+  res.json(`cadastrado!`)
 })
 
 app.listen(3000, function() {

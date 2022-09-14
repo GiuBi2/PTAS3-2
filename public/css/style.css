@@ -1,3 +1,22 @@
 body {
-  background-color: aquamarine;
+  background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p3/1987871-abstrato-preto-listras-diagonal-fundo-gr%C3%A1tis-vetor.jpg);
+}
+.form{
+  width: 50%;
+  position: relative;
+  text-align: center;
+  margin-top: 300px;
+  margin-left: 450px;
+  
+  border: solid white 2px;
+}
+h1{
+  color: white;
+  text-align: center;
+}
+.button{
+  margin: 5px;
+}
+.form-label{
+  color: white;
 }

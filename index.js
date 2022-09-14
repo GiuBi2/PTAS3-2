@@ -25,7 +25,7 @@ app.use(
     secret: process.env.SECRET,
     algorithms: ["HS256"],
     getToken: req => req.cookies.token
-  }).unless({ path: ["/autenticar", "/logar", "/deslogar", "/sobre"] }) //rotas que não passam pela autenticação
+  }).unless({ path: ["/autenticar", "/logar", "/deslogar", "/sobre", "/cadastrar"] }) //rotas que não passam pela autenticação
 );
 app.get('/sobre', async function(req, res){
   res.render('sobre');
@@ -58,6 +58,9 @@ app.post('/logar', (req, res) => {
 app.post('/deslogar', function(req, res) {
   res.cookie('token', null, { httpOnly: true });
   res.json({deslogado: true})
+})
+app.post('/cadastrar', function(req, res) {
+  res.cookie('token', null, { httpOnly: true });
 })
 
 app.listen(3000, function() {

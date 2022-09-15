@@ -25,13 +25,15 @@ app.use(
     secret: process.env.SECRET,
     algorithms: ["HS256"],
     getToken: req => req.cookies.token
-  }).unless({ path: ["/autenticar", "/logar", "/deslogar", "/sobre", "/cadastrar"] }) //rotas que não passam pela autenticação
+  }).unless({ path: ["/autenticar", "/logar", "/deslogar", "/sobre", "/cadastrar", "listar"] }) //rotas que não passam pela autenticação
 );
 app.get('/sobre', async function(req, res){
   res.render('sobre');
 })
 app.get('/listar', async function(req, res){
-  res.render('listar');
+  var usuarios = await usuario.findAll();
+  res.json(usuarios) 
+
 })
 app.get('/autenticar', async function(req, res){
   res.render('autenticar');

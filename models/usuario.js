@@ -14,7 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   usuario.init({
-    nome: DataTypes.STRING
+    nome: DataTypes.STRING,
+    password: DataTypes.STRING,
+    user: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'usuario',

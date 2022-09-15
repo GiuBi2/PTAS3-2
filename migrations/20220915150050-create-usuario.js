@@ -11,19 +11,19 @@ module.exports = {
       nome: {
         type: Sequelize.STRING
       },
-      senha: {
-        allowNull: false,
+      password: {
+        type: Sequelize.STRING
+      },
+      user: {
         type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('NOW')
+        type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('NOW')
+        type: Sequelize.DATE
       }
     });
   },

@@ -19,10 +19,18 @@
     "express-jwt": "^7.7.5",
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.8.0",
-    "sequelize": "^6.21.6"
+    "sequelize": "^6.23.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19",
+    "nodemon": "^2.0.20",
     "sequelize-cli": "^6.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiuBi2/PTAS3-2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GiuBi2/PTAS3-2/issues"
+  },
+  "homepage": "https://github.com/GiuBi2/PTAS3-2#readme"
 }

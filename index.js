@@ -31,8 +31,9 @@ app.get('/sobre', async function(req, res){
   res.render('sobre');
 })
 app.get('/listar', async function(req, res){
-  var usuarios = await user.findAll();
-  res.json(usuarios); 
+  const usuarios = await usuario.findAll();
+  //res.render("cadastrar", {usuarios}); 
+  res.json(usuarios);
 
 })
 app.get('/autenticar', async function(req, res){
@@ -40,7 +41,7 @@ app.get('/autenticar', async function(req, res){
 })
 app.get('/cadastrar', async function(req, res){
   res.render('cadastrar');
-})-
+})
 app.get('/', async function(req, res){
   res.render("home")
 })
@@ -64,8 +65,8 @@ app.post('/deslogar', function(req, res) {
   res.json({deslogado: true})
 })
 app.post('/cadastrar', async function(req, res) {
-  const usuario= usuario.create(req.body.usuario)
-  res.json(`cadastrado!`)
+  const usuario1 = await usuario.create(req.body)
+  res.json(usuario1)
 })
 
 app.listen(3000, function() {

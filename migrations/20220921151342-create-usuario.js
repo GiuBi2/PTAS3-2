@@ -11,10 +11,10 @@ module.exports = {
       nome: {
         type: Sequelize.STRING
       },
-      password: {
+      user: {
         type: Sequelize.STRING
       },
-      user: {
+      password: {
         type: Sequelize.STRING
       },
       createdAt: {
